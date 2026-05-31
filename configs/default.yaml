@@ -1,0 +1,26 @@
+# Konfigurasi default EAMSNet (LEVIR-CD)
+data_root: LEVIR-CD-256      # folder berisi train/ val/ test/ (A, B, label)
+img_size: 256
+batch_size: 16
+num_workers: 0
+
+backbone: mobilenet_v2       # mobilenet_v2 | resnet50 | convnext_tiny
+width: lite                  # lite | full
+pretrained: true
+
+# Modul (untuk training penuh biarkan semua true)
+use_atdam: true
+use_msda: true
+use_eabrm: true
+
+# Optimisasi
+epochs: 250
+warmup: 5
+patience: 60
+lr_encoder: 0.0001
+lr_other: 0.0003
+weight_decay: 0.01
+ema: true
+
+seed: 42
+out_dir: outputs            # tempat menyimpan checkpoint & hasil
