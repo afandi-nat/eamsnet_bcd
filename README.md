@@ -1,4 +1,4 @@
-# EAMSNet — Change Detection on LEVIR-CD
+# EAMSNet: An Efficient Edge-Aware Multi-Scale Attention Network for Building Change Detection in Remote Sensing Imagery
 
 A PyTorch implementation of **EAMSNet**, a binary change-detection network for
 remote-sensing imagery built on the lightweight **MobileNetV2** backbone with three
