@@ -4,9 +4,9 @@ A PyTorch implementation of **EAMSNet**, a binary change-detection network for
 remote-sensing imagery built on the lightweight **MobileNetV2** backbone with three
 proposed modules:
 
-- **ATDAM** — *Attentive Temporal Difference Attention Module*: builds the T1/T2 difference feature using channel + spatial attention and gating.
-- **MSDA** — *Multi-Scale Dilated Aggregation*: ASPP-like multi-scale context aggregation on the deepest difference feature.
-- **EABRM** — *Edge-Aware Boundary Refinement Module*: sharpens change-object boundaries using Sobel operators.
+- **ATDAM** (Attentive Temporal Difference Attention Module) : builds the T1/T2 difference feature using channel + spatial attention and gating.
+- **MSDA** (Multi-Scale Dilated Aggregation) : ASPP-like multi-scale context aggregation on the deepest difference feature.
+- **EABRM** (Edge-Aware Boundary Refinement Module) : sharpens change-object boundaries using Sobel operators.
 
 This repository provides a full training pipeline, evaluation (threshold-optimized,
 flip-TTA, multi-scale TTA, post-processing), a **resumable ablation study**, and
@@ -128,7 +128,3 @@ flags control which modules are active; for full-model training keep all three `
 Results depend on the input resolution. When comparing against other papers, make
 sure the resolution (256 vs 512) and evaluation protocol are equivalent. The scripts
 use AMP (mixed precision) and EMA by default; the seed is set via `--seed`.
-
-## License
-
-MIT — see the [LICENSE](LICENSE) file.
